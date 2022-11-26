@@ -36,16 +36,31 @@
 # Задача 9. Напишите программу, которая по заданному номеру четверти, 
 # показывает диапазон возможных координат точек в этой четверти (x и y).
 
-quarter_number = int(input('Введите номер координатной четверти: '))
+# quarter_number = int(input('Введите номер координатной четверти: '))
 
-if 0 < quarter_number < 5:
-    if quarter_number == 1:
-        print('X > 0 и Y > 0')
-    elif quarter_number == 2:
-        print('X < 0 и Y > 0')
-    elif quarter_number == 3:
-        print('X < 0 и Y < 0')
-    else:
-        print('X > 0 и Y < 0')
-else:
-    print('Ошибка! Диапазон координатных четвертей от 1 до 4')
+# if 0 < quarter_number < 5:
+#     if quarter_number == 1:
+#         print('X > 0 и Y > 0')
+#     elif quarter_number == 2:
+#         print('X < 0 и Y > 0')
+#     elif quarter_number == 3:
+#         print('X < 0 и Y < 0')
+#     else:
+#         print('X > 0 и Y < 0')
+# else:
+#     print('Ошибка! Диапазон координатных четвертей от 1 до 4')
+
+# Задача 10. Напишите программу, которая принимает на вход координаты двух
+# точек и находит расстояние между ними в 2D пространстве.
+
+# Пример:
+# - A (3,6); B (2,1) -> 5,09
+# - A (7,-5); B (1,-1) -> 7,21
+
+a_x = int(input('Введите координату X точки A: '))
+a_y = int(input('Введите координату Y точки A: '))
+b_x = int(input('Введите координату X точки B: '))
+b_y = int(input('Введите координату Y точки B: '))
+
+distance_points = ((a_x - b_x)**2 + (a_y-b_y) ** 2) ** 0.5
+print(round(distance_points, 2))
