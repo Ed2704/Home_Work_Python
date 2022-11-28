@@ -6,12 +6,12 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
-# str = input()
-# sum = 0
-# for i in range(len(str)):
-#     if str[i] != ',':
-#         sum = sum + int(str[i])
-# print(sum)
+str = input()
+sum = 0
+for i in range(len(str)):
+    if str[i] != ',':
+        sum = sum + int(str[i])
+print(sum)
 
 
 
@@ -24,17 +24,31 @@
 n = int(input())
 num = []
 s = 1
-for i in range(1, n+1):
+for i in range(1, n + 1):
     s *= i
     num.append(s)
 print(num)    
 
 
+# Задача 16. Задайте список из n чисел последовательности (1 + 1 / n) ** n 
+# и выведите на экран их сумму.
 
+# Пример:
+# - Для n = 6: {1: 4, 2: 7, 3: 10, 4: 13, 5: 16, 6: 19}
 
+n = int(input())
+s = {}
+sum = 0
+for i in range(1, n+1):
+    s[i] = round((1+1/i)**i, 2)
+    sum += s[i]
+print(f"Для N={n} {s}")
+print(f"Сумма - {sum}")    
 
+# Задача 18. Реализуйте алгоритм перемешивания списка.
 
-
-
-
-
+import random
+s = ['a', 'b', 'c', 'd', 'e', 'f']
+print(f"Изначальный список:  {s}")
+random.shuffle(s)
+print(f"Перемешанный список: {s}")
